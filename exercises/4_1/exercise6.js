@@ -1,23 +1,22 @@
-let piece = bishop;
+let piece = "bishop";
 let piece_lowerCase = piece.toLowerCase();
 
-if (piece_lowerCase === pawn){
-    console.log(straight)
-}
-
-else if (piece_lowerCase === bishop){
-    console.log(diagonal)
-}
-else if (piece_lowerCase === knight){
-    console.log("L movement")
-}
-else if (piece_lowerCase === rook){
-    console.log(straight)
-}
-
-else if (piece_lowerCase === queen){
-    console.log("every direction")
-}
-else {
-    console.log("every direction")
-}
+switch (piece_lowerCase){
+    case "pawn":
+        alert("Moves vertically one or two squares")
+        break;
+    case "bishop":
+        alert("Moves diagonally any number of squares")
+        break;
+    case "knight":
+        alert("Moves in L shape")
+        break;
+    case "rook":
+        alert("Moves horizontally or vertically any number os squares")
+        break;
+    case "queen":
+        alert("Moves horizontally, vertically or diagonally any number of squares. But are unable to jump over pieces")
+        break;
+    default:
+        alert("Moves horizontally, vertically or diagonally any number of squares and is able to jump over pieces");
+}   
