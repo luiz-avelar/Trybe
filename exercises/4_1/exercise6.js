@@ -1,4 +1,4 @@
-let piece = "knight";
+let piece = "pawn";
 let piece_lowerCase = piece.toLowerCase();
 
 switch (piece_lowerCase){
