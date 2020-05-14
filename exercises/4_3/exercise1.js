@@ -14,10 +14,10 @@ for (let j = 0; j < n; j++){
 let n = 5;
 
 for (i = 0; i < n; i++){
-  let output = ""
+  let output = "";
   for (j = 0; j < n; j++){
-    output = output + "*" 
+    output = output + "*" ;
   } 
-  console.log(output)
+  console.log(output);
 }
 
