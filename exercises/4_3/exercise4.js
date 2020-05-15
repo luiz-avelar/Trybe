@@ -13,16 +13,16 @@ if (n % 2 === 0){
 
 spaces = lines - 1;
 
-for (i = 0; i < lines; i++){
+for (let i = 0; i < lines; i++){
   let output = "";
 
-  for (j = spaces; j >= 0; j--){
+  for (let j = spaces; j >= 0; j--){
     output = output + " ";
   }
-  for (k = 0; k < asterisks; k++){
+  for (let k = 0; k < asterisks; k++){
     output = output + "*";
   }
-  for (t = spaces; t >= 0; t--){
+  for (let t = spaces; t >= 0; t--){
     output = output + " ";
   }
 
