@@ -13,5 +13,10 @@ let info2 = {
 }
 
 for (i in info){
-  console.log(info[i] + " e " + info2[i])
+  if (info[i] === info2[i]){
+    console.log("Ambos recorrentes");
+  } else{
+    console.log(info[i] + " e " + info2[i]);
+  }
 }
+
