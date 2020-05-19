@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p id="changed-text">-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <script>
+      function changeText(text){
+        document.getElementById("changed-text").innerHTML = text;
+      }
+
+      function changeToTrybeColor(color){
+        document.getElementsByClassName("main-content")[0].style.backgroundColor = color;
+      }
+
+      function changeBoxColor (color){
+        document.getElementsByClassName("center-content")[0].style.backgroundColor = color;
+      }
+
+      function correctText (text){
+        document.getElementsByTagName("h1")[0].innerHTML = text;
+      }
+
+      function toUpperCase(){
+        let element = document.getElementsByTagName("p");
+        for (i = 0; i < element.length; i+=1){
+          element[i].innerHTML = element[i].innerHTML.toUpperCase();
+        }
+      }
+
+      function showConsole(){
+        let element = document.getElementsByTagName("p");
+        for (i = 0; i < element.length; i+=1){
+          console.log(element[i]);
+        }
+      }
+
+      function dynamiqueList(){
+        let element = document.getElementsByTagName("li");
+        for (i = 0; i < element.length; i+=1){
+          if (i === element.length - 1){
+            element[i].classList.add("par", "impar");
+          } else if (i % 2 === 0){
+            element[i].classList.add("par");
+          } else {
+            element[i].classList.add("impar");
+          }
+        }
+      }
+
+      changeText("Me vejo dois anos mais velho");
+      changeToTrybeColor("#0fa36b");
+      changeBoxColor("white");
+      correctText("Exercício 4.5 - JavaScript");
+      toUpperCase();
+      showConsole();
+      dynamiqueList();
+
+    </script>
+  </body>
+</html>
